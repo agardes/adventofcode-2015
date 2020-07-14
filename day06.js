@@ -16,9 +16,7 @@ for(let x=0;x<1000;x++){
 
 const day06 = {
     dir:data.map(el=>el.split(' ')),
-    partOne(){
-
-    
+    run(){ 
     for(let dir of this.dir){
         let [fromX,fromY] = dir[0] == "turn" ? dir[2].split(',').map(Number) : dir[1].split(',').map(Number)
         let [toX, toY] = dir[dir.length-1].split(',').map(Number)
@@ -53,5 +51,5 @@ const day06 = {
     },
 }
 
-day06.partOne()
+day06.run()
 
