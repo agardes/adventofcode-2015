@@ -39,7 +39,7 @@ function getDistance(arr){
     return res
 }
 
-function search(from,total,visited=[]){
+function search(from,visited=[]){
     let maps = cities[from]
     for(el of maps){     
         for(const [to, value] of Object.entries(el)){
@@ -55,8 +55,7 @@ function search(from,total,visited=[]){
                         maxDist = maxDist >= d ? maxDist : d 
                         return d
                 }else{
-                    total+=value
-                    search(to,total,visited)
+                    search(to,visited)
                 }
             }
 
@@ -67,7 +66,7 @@ function search(from,total,visited=[]){
 }
 
 for(let i=0;i<city.length;i++){
-    search(city[i],0)
+    search(city[i])
 }
 
 console.log(`Part one : ${minDist}`)
