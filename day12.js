@@ -1,6 +1,4 @@
 let fs = require('fs');
-const { type } = require('os');
-const { isFunction } = require('util');
 let read = fs.readFileSync("input12.txt");
 let data = read.toString().split('\n').map(el=>el.split(' '))
 let digit = /(\d+)|-\d+/g
