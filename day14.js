@@ -43,5 +43,5 @@ for(let i=1;i<seconds;i++){
         partTwo = value[7] > partTwo ? value[7] : partTwo
     }
 }
-console.log(partOne)
-console.log(partTwo)
+console.log(`Part one = ${partOne}`)
+console.log(`Part two = ${partTwo}`)
