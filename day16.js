@@ -39,6 +39,6 @@ for(let aunt of data){
 
     if(c==3){
         partTwo = aunt.split(' ')[1]
-        console.log("Part one = " +partTwo.substring(0,partTwo.length-1))
+        console.log("Part two = " +partTwo.substring(0,partTwo.length-1))
     }
 }
